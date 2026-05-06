@@ -1,12 +1,12 @@
 {
   "schema": "cofabric.task_status.v1",
   "task_number": 2,
-  "title": "Project scaffolding and development environment setup",
+  "title": "Database schema and RLS policies",
   "status": "pending",
   "priority": "high",
   "description": "",
   "completion_summary": null,
   "pr_url": null,
   "pr_doc": null,
-  "updated_at": "2026-05-06T18:34:24.008Z"
+  "updated_at": "2026-05-06T18:42:12.244Z"
 }

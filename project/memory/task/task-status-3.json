@@ -1,12 +1,12 @@
 {
   "schema": "cofabric.task_status.v1",
   "task_number": 3,
-  "title": "Database schema design and migrations infrastructure",
+  "title": "TypeScript types and database type generation",
   "status": "pending",
   "priority": "high",
   "description": "",
   "completion_summary": null,
   "pr_url": null,
   "pr_doc": null,
-  "updated_at": "2026-05-06T18:34:24.165Z"
+  "updated_at": "2026-05-06T18:42:12.368Z"
 }

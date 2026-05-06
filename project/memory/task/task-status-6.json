@@ -1,12 +1,12 @@
 {
   "schema": "cofabric.task_status.v1",
   "task_number": 6,
-  "title": "Frontend application shell and routing",
+  "title": "Create task form and mutation",
   "status": "pending",
   "priority": "medium",
   "description": "",
   "completion_summary": null,
   "pr_url": null,
   "pr_doc": null,
-  "updated_at": "2026-05-06T18:34:24.921Z"
+  "updated_at": "2026-05-06T18:42:12.785Z"
 }
