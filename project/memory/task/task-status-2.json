@@ -1,12 +1,12 @@
 {
   "schema": "cofabric.task_status.v1",
   "task_number": 2,
-  "title": "Database schema and RLS policies",
+  "title": "Authentication Integration with Login/Logout UI",
   "status": "pending",
   "priority": "high",
   "description": "",
   "completion_summary": null,
   "pr_url": null,
   "pr_doc": null,
-  "updated_at": "2026-05-06T18:42:46.457Z"
+  "updated_at": "2026-05-06T18:43:21.566Z"
 }

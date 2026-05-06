@@ -1,12 +1,12 @@
 {
   "schema": "cofabric.task_status.v1",
   "task_number": 4,
-  "title": "Supabase type generation and database utilities",
+  "title": "Task List Display with Data Fetching",
   "status": "pending",
-  "priority": "medium",
+  "priority": "high",
   "description": "",
   "completion_summary": null,
   "pr_url": null,
   "pr_doc": null,
-  "updated_at": "2026-05-06T18:42:46.797Z"
+  "updated_at": "2026-05-06T18:43:21.847Z"
 }

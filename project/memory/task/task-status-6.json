@@ -1,12 +1,12 @@
 {
   "schema": "cofabric.task_status.v1",
   "task_number": 6,
-  "title": "Create task form and mutation",
+  "title": "Update Task Status with Click Cycling",
   "status": "pending",
   "priority": "medium",
   "description": "",
   "completion_summary": null,
   "pr_url": null,
   "pr_doc": null,
-  "updated_at": "2026-05-06T18:42:47.062Z"
+  "updated_at": "2026-05-06T18:43:22.115Z"
 }

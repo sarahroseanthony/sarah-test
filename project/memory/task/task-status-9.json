@@ -1,12 +1,12 @@
 {
   "schema": "cofabric.task_status.v1",
   "task_number": 9,
-  "title": "Shared UI components and styling",
+  "title": "Layout, Navigation, and User Context Display",
   "status": "pending",
-  "priority": "medium",
+  "priority": "low",
   "description": "",
   "completion_summary": null,
   "pr_url": null,
   "pr_doc": null,
-  "updated_at": "2026-05-06T18:42:47.527Z"
+  "updated_at": "2026-05-06T18:43:22.505Z"
 }
