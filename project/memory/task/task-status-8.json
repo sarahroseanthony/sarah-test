@@ -1,12 +1,12 @@
 {
   "schema": "cofabric.task_status.v1",
   "task_number": 8,
-  "title": "Delete task with confirmation",
+  "title": "Delete task with confirmation dialog",
   "status": "pending",
   "priority": "medium",
   "description": "",
   "completion_summary": null,
   "pr_url": null,
   "pr_doc": null,
-  "updated_at": "2026-05-06T18:42:13.046Z"
+  "updated_at": "2026-05-06T18:42:47.375Z"
 }

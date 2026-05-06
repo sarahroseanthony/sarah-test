@@ -1,12 +1,12 @@
 {
   "schema": "cofabric.task_status.v1",
   "task_number": 1,
-  "title": "Project scaffolding and Supabase client setup",
+  "title": "Project scaffolding and Supabase client configuration",
   "status": "pending",
   "priority": "high",
   "description": "",
   "completion_summary": null,
   "pr_url": null,
   "pr_doc": null,
-  "updated_at": "2026-05-06T18:42:12.102Z"
+  "updated_at": "2026-05-06T18:42:46.249Z"
 }

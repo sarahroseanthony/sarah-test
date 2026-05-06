@@ -1,12 +1,12 @@
 {
   "schema": "cofabric.task_status.v1",
   "task_number": 10,
-  "title": "Error handling and edge cases",
+  "title": "Error handling and loading states",
   "status": "pending",
   "priority": "low",
   "description": "",
   "completion_summary": null,
   "pr_url": null,
   "pr_doc": null,
-  "updated_at": "2026-05-06T18:42:13.335Z"
+  "updated_at": "2026-05-06T18:42:47.663Z"
 }
