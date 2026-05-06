@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "cofabric.memory.scaffold.v1",
+  "fileTree": [
+    {
+      "path": "package.json",
+      "purpose": "Node.js project configuration with Next.js and Supabase dependencies",
+      "isEmpty": false
+    },
+    {
+      "path": "tsconfig.json",
+      "purpose": "TypeScript compiler configuration",
+      "isEmpty": false
+    },
+    {
+      "path": "next.config.js",
+      "purpose": "Next.js framework configuration",
+      "isEmpty": false
+    },
+    {
+      "path": "postcss.config.js",
+      "purpose": "PostCSS configuration for CSS processing",
+      "isEmpty": false
+    },
+    {
+      "path": "tailwind.config.js",
+      "purpose": "Tailwind CSS configuration",
+      "isEmpty": false
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "purpose": "Next.js root layout component",
+      "isEmpty": false
+    },
+    {
+      "path": "src/app/globals.css",
+      "purpose": "Global CSS styles",
+      "isEmpty": false
+    },
+    {
+      "path": "src/app/page.tsx",
+      "purpose": "Next.js root page component",
+      "isEmpty": false
+    },
+    {
+      "path": ".env.example",
+      "purpose": "Environment variables template file",
+      "isEmpty": false
+    },
+    {
+      "path": "pr-docs/.gitkeep",
+      "purpose": "Git placeholder for PR documentation directory",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/.gitkeep",
+      "purpose": "Git placeholder for memory directory",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/project/.gitkeep",
+      "purpose": "Git placeholder for project memory directory",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/task/.gitkeep",
+      "purpose": "Git placeholder for task memory directory",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/agent/.gitkeep",
+      "purpose": "Git placeholder for agent memory directory",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/context/.gitkeep",
+      "purpose": "Git placeholder for context memory directory",
+      "isEmpty": false
+    }
+  ],
+  "libraryExports": [],
+  "existingRoutes": [],
+  "databaseState": {
+    "migrationsExist": false,
+    "tables": []
+  },
+  "intentionallyEmpty": []
+}

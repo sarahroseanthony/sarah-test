@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "cofabric.memory.project.v2",
+  "name": "Test Project",
+  "oneLineDescription": "A minimal task tracker web app for testing the Cofabric pipeline end-to-end",
+  "whatItIs": "A minimal task tracker web app for testing the Cofabric pipeline end-to-end with basic CRUD operations for tasks including creation, status updates, and deletion with user assignment functionality.",
+  "stack": [
+    {
+      "name": "next",
+      "version": "^14.0.0",
+      "purpose": "React framework with App Router"
+    },
+    {
+      "name": "@supabase/supabase-js",
+      "version": "^2.38.0",
+      "purpose": "Supabase client for Postgres and auth"
+    },
+    {
+      "name": "react",
+      "version": "^18.0.0",
+      "purpose": "UI library"
+    },
+    {
+      "name": "react-dom",
+      "version": "^18.0.0",
+      "purpose": "React DOM bindings"
+    }
+  ],
+  "externalIntegrations": [
+    {
+      "service": "Supabase",
+      "envVars": [
+        "NEXT_PUBLIC_SUPABASE_URL",
+        "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+        "SUPABASE_SERVICE_ROLE_KEY"
+      ],
+      "clientLocation": null
+    }
+  ],
+  "coreUserFlows": [
+    "Display all tasks in a table with columns for title, status, assignee, and created date",
+    "Add a new task using a form with required title and optional description",
+    "Click to cycle a task status through todo → in-progress → done",
+    "Remove a task with a confirmation prompt"
+  ],
+  "outOfScope": [],
+  "dataModel": [
+    {
+      "entity": "tasks",
+      "purpose": "Stores task information with title, description, status, assignee, and timestamps",
+      "keyFields": [
+        "id",
+        "title",
+        "description",
+        "status",
+        "assignee_id",
+        "created_at",
+        "updated_at"
+      ]
+    }
+  ],
+  "crossCuttingPrinciples": [
+    "Users can read all tasks but only update or delete their own tasks through row-level security"
+  ],
+  "specSummary": "Test Project is a minimal task tracker web application designed specifically for testing the Cofabric pipeline end-to-end. The application provides essential task management functionality through a clean web interface built with Next.js App Router, TypeScript, and Supabase for backend services. Users can view all tasks in a structured table format displaying title, status, assignee, and creation date. Task creation is handled through a simple form requiring a title with an optional description field. The status management system allows users to cycle tasks through three states: todo, in-progress, and done with simple click interactions. Task deletion includes a confirmation prompt for safety. The backend uses Supabase's Postgres database with a tasks table containing fields for id, title, description, status, assignee reference to authenticated users, and timestamp tracking. Security is implemented through row-level security policies where users can view all tasks but only modify or delete tasks they own. The technology stack emphasizes modern web development practices with TypeScript for type safety and Supabase handling both database operations and user authentication seamlessly."
+}
