@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Test Project',
-  description: 'A minimal task tracker web app for testing the Cofabric pipeline end-to-end.',
+  title: 'Task Tracker',
+  description: 'A minimal task tracker app',
 }
 
 export default function RootLayout({
