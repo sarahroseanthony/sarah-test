@@ -1,0 +1,53 @@
+{
+  "overview": "This PR introduces a minimal full-stack Task Tracker app built with Next.js and Supabase. It ships server actions for CRUD operations on tasks, client components for adding and managing tasks, Supabase client/server helpers, TypeScript types, and the initial database migration with RLS policies.",
+  "summary_json": {
+    "Branch": "task/test-20-3",
+    "PR": "https://github.com/sarahroseanthony/sarah-test/pull/1",
+    "Stack": "Next.js (App Router), Supabase, TypeScript, Tailwind CSS",
+    "Env vars required": "NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY",
+    "DB table": "tasks (uuid pk, title, description, status, assignee_id, created_at, updated_at)",
+    "Task statuses": "todo, in-progress, done (cyclic via UI button)",
+    "RLS policies": "Authenticated read-all; insert/update/delete restricted to own assignee_id",
+    "Server actions": "getTasks, createTask, updateTaskStatus, deleteTask"
+  },
+  "files_changed": [
+    {
+      "path": "project/src/app/actions.ts",
+      "summary": "Server actions for fetching, creating, updating status, and deleting tasks via Supabase, with revalidatePath calls after mutations."
+    },
+    {
+      "path": "project/src/app/layout.tsx",
+      "summary": "Root Next.js layout with Inter font and global CSS applied; sets app title to 'Task Tracker'."
+    },
+    {
+      "path": "project/src/app/page.tsx",
+      "summary": "Home page that fetches tasks server-side and renders AddTaskForm plus TaskTable with a task count header."
+    },
+    {
+      "path": "project/src/components/AddTaskForm.tsx",
+      "summary": "Client form component for creating a new task with title/description fields, loading state, and success/error feedback."
+    },
+    {
+      "path": "project/src/components/TaskTable.tsx",
+      "summary": "Client table component displaying all tasks with cyclic status toggle button and delete action per row."
+    },
+    {
+      "path": "project/src/lib/supabase/client.ts",
+      "summary": "Singleton browser-side Supabase client using public env vars."
+    },
+    {
+      "path": "project/src/lib/supabase/server.ts",
+      "summary": "Server-side Supabase client using the service role key for privileged operations in server actions."
+    },
+    {
+      "path": "project/src/types/task.ts",
+      "summary": "TypeScript interfaces for Task, TaskStatus, and NewTask shared across the app."
+    },
+    {
+      "path": "project/supabase/migrations/20240101000000_create_tasks.sql",
+      "summary": "Initial migration creating the tasks table with RLS enabled and four policies scoped to authenticated users and assignee ownership."
+    }
+  ],
+  "extras": "Verify: run the migration against your Supabase project, set all three env vars, then test create/status-cycle/delete flows. Risk: server actions use the service role key which bypasses RLS — confirm this is intentional for server-side mutations. Follow-up: RLS insert policy requires assignee_id = auth.uid() but createTask in actions.ts does not set assignee_id, which will cause RLS violations for authenticated users if service role is ever removed.",
+  "fallback_text": "PR #1 on branch task/test-20-3 adds a complete Next.js + Supabase Task Tracker. Key pieces: server actions (getTasks, createTask, updateTaskStatus, deleteTask) in actions.ts; AddTaskForm and TaskTable client components; singleton browser and server Supabase clients; Task/TaskStatus/NewTask types; and a Supabase migration creating the tasks table with RLS. Requires NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, and SUPABASE_SERVICE_ROLE_KEY. Note that the server client uses the service role key (bypassing RLS), and createTask does not populate assignee_id, which would conflict with the RLS insert policy if the service role were removed."
+}
