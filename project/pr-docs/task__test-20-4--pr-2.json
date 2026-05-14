@@ -1,0 +1,36 @@
+{
+  "overview": "This PR introduces a full-stack task management feature built with Next.js and Supabase. It adds a homepage with task listing, a form to create tasks, a table component to display and cycle task status, and the supporting Supabase client and database migration. The stack uses RLS policies to restrict updates and deletes to task assignees.",
+  "summary_json": {
+    "Branch": "task/test-20-4",
+    "PR": "https://github.com/sarahroseanthony/sarah-test/pull/2",
+    "Env vars required": "NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY",
+    "DB table": "tasks (UUID pk, title, description, status, assignee_id, created_at, updated_at)",
+    "Status values": "todo, in-progress, done",
+    "RLS policies": "SELECT/INSERT open to all; UPDATE/DELETE restricted to assignee_id = auth.uid()",
+    "Migration file": "project/supabase/migrations/001_create_tasks_table.sql"
+  },
+  "files_changed": [
+    {
+      "path": "project/src/app/page.tsx",
+      "summary": "Homepage component that fetches, displays, adds, and handles status changes for tasks via Supabase."
+    },
+    {
+      "path": "project/src/components/AddTaskForm.tsx",
+      "summary": "Form component for creating new tasks with title validation and loading/error state handling."
+    },
+    {
+      "path": "project/src/components/TaskTable.tsx",
+      "summary": "Table component that renders tasks and cycles their status (todo→in-progress→done→todo) on click."
+    },
+    {
+      "path": "project/src/lib/supabase.ts",
+      "summary": "Supabase client initialisation and Task type definition used across the app."
+    },
+    {
+      "path": "project/supabase/migrations/001_create_tasks_table.sql",
+      "summary": "Initial migration creating the tasks table with RLS enabled and an auto-update trigger for updated_at."
+    }
+  ],
+  "extras": "Verify: set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY, run migration against Supabase project, then confirm task CRUD works in the UI. Follow-up: UPDATE/DELETE policies require assignee_id to be set; currently the insert does not set assignee_id, so authenticated users cannot delete/update their own tasks unless that is wired up.",
+  "fallback_text": "PR #2 (branch task/test-20-4) ships a Next.js + Supabase task manager. Files added: homepage (page.tsx) for fetching and managing tasks, AddTaskForm for creating tasks, TaskTable for displaying and cycling status, a Supabase client/type file, and a SQL migration creating the tasks table with RLS. Env vars NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY are required. RLS allows open SELECT/INSERT but restricts UPDATE/DELETE to the assignee — note that the insert flow does not currently populate assignee_id, which may block those operations for authenticated users."
+}
